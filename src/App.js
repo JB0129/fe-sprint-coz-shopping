@@ -12,16 +12,16 @@ import axios from 'axios';
 
 function App() {
 
-  const [isProduct, setProduct] = useState(null)
+  const [isData, setData] = useState(null)
   const [isBookmark, setBookmark] = useState(data)
 
   const getData = () => {
-    return axios.get('http://cozshopping.codestates-seb.link/api/v1/products?count=8')
-    .then(res => {
-      console.log(res.data)
-      setProduct(res.data)
-    })
-    .catch(err => console.log(err.response.data))
+    return axios.get('http://cozshopping.codestates-seb.link/api/v1/products')
+      .then(res => {
+        console.log(res.data)
+        setData(res.data)
+      })
+      .catch(err => console.log(err.response.data))
   }
 
   useEffect(() => {
@@ -34,11 +34,10 @@ function App() {
         <Header />
         <div className='body'>
           <Routes>
-            <Route path='/' element={<Main isProduct={isProduct} isBookmark={isBookmark} />} />
-            <Route path='/product' element={<Product isProduct={isProduct} />} />
+            <Route path='/' element={<Main isData={isData} isBookmark={isBookmark} />} />
+            <Route path='/product' element={<Product isData={isData} />} />
             <Route path='/bookmark' element={<Bookmark isBookmark={isBookmark} />} />
           </Routes>
-          <Footer />
         </div>
       </div>
     </BrowserRouter>

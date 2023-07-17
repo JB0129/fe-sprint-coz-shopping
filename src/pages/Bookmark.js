@@ -1,5 +1,6 @@
 import List from '../component/List'
 import Type from '../component/Type'
+import Footer from '../component/Footer'
 
 export default function Bookmark({ isBookmark }) {
 
@@ -7,8 +8,9 @@ export default function Bookmark({ isBookmark }) {
         <div className="bookmark">
             <Type />
             <ul className='BookmarkList'>
-                {isBookmark ? isBookmark.map((el, idx) => { return <List key={idx} /> }) : ''}
+                {isBookmark ? isBookmark.map((obj, idx) => { return <List key={idx} obj={obj} /> }) : ''}
             </ul>
+            <Footer />
         </div>
     )
 }
