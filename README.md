@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 요구사항
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 일반 요구사항
 
-## Available Scripts
+- 북마크 기능이 있는 상품 리스트 조회 애플리케이션
+    - 북마크 체크 시 북마크 리스트에 추가 되어야 한다.
 
-In the project directory, you can run:
+- 상품의 종류는 총 4가지 ( 상품, 카테고리, 기획전, 브랜드 )
+    - 필터링 기능이 있으며, 상품 종류 선택 시 리스트가 바껴야 한다.
 
-### `npm start`
+- 모든 페이지에 Header, Footer 존재
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 최소 세 가지의 페이지를 제작 (SPA 구성 방식)
+    1. Main
+    2. Product_List
+    3. Bookmark_List
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 세부 요구사항
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Header 요구사항
 
-### `npm run build`
+- 스크롤 할 때 Header는 상단에 고정되어야 한다.
+- Header에는 메인로고 및 제목과 햄버거 버튼(메뉴 버튼)이 존재한다.
+- 메인 로고 및 제목을 클릭 시, Main 페이지로 이동
+- 메뉴 버튼 클릭 시, 드롭 다운 형식이 출력된다. 드롭 다운에는 다음과 같은 3가지 요소가 존재한다.
+    1. 'OOO 님 안녕하세요!'
+    2. 상품 리스트 => 클릭 시 Product_List로 이동
+    3. 북마크 리스트 => 클릭 시 Bookmark_List로 이동
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main_Page 요구사항
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 상품 리스트와 북마크 리스트가 존재한다.
+- 각 리스트에는 4가지 요소만 출력된다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Product_List_Page 요구사항
 
-### `npm run eject`
+- 상품 종류 선택 버튼이 존재한다. (일반 요구사항 내용)
+- 상품 종류 선택 시, 리스트의 내용은 필터링 되어야한다.
+- 무한 스크롤 기능을 적용한다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Bookmark_List_Page 요구사항
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 상품 종류 선택 버튼이 존재한다. (일반 요구사항 내용)
+- 상품 종류 선택 시, 리스트의 내용은 필터링 되어야한다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 그 외 추가사항
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 상품 이미지 클릭 시, 상품 모습이 확대 된 모달창이 출력되어야 한다.
+- 리스트가 존재하지 않으면, 존재하지 않다는 문구 출력하기.
+- 북마크 체크 박스를 선택 시, 즉시 북마크 리스트에 추가되며, 색상이 바껴야한다.
+    - 그와 동시에 체크 여부를 알리는 토스트 창 출력하기
