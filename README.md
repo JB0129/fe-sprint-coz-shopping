@@ -10,7 +10,7 @@
 
 - 모든 페이지에 Header, Footer 존재
 
-- 최소 세 가지의 페이지를 제작 (SPA 구성 방식)
+-- 최소 세 가지의 페이지를 제작 (SPA 구성 방식)
     1. Main
     2. Product_List
     3. Bookmark_List
