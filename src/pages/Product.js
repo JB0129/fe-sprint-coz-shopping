@@ -24,9 +24,7 @@ export default function Product({ isData, addBookmark }) {
                                 return obj.type === isType
                             }
                         })
-                        .map((obj, idx) => {
-                            return <List key={idx} obj={obj} addBookmark={addBookmark} />
-                        })
+                        .map((obj, idx) => <List key={idx} obj={obj} addBookmark={addBookmark} />)
                     : null}
             </ul>
             <Footer />

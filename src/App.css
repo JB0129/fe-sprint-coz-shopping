@@ -120,7 +120,9 @@ button.menu>img {
     flex-direction: column;
     align-items: center;
 
-    border: 1px solid pink;
+    margin-top: 24px;
+
+    /* border: 1px solid pink; */
 }
 
 .ListBtn {
@@ -149,12 +151,17 @@ ul.ProductList {
 }
 
 ul.BookmarkList {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 288px);
     padding: 0px;
     margin: 0px;
     flex-wrap: wrap;
     width: 1128px;
+}
+
+.Bookmark_page {
+    height: 564px;
+    /* border: 1px solid black; */
 }
 
 li {
@@ -370,6 +377,10 @@ footer {
 
     font-size: 20px;
     font-weight: 600;
+}
+
+.empty_book {
+    height: 540px;
 }
 
 .Modal {
